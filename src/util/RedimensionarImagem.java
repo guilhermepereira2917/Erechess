@@ -11,4 +11,5 @@ public abstract class RedimensionarImagem {
         imageIcon = new ImageIcon(novaImagem);
         return imageIcon;
     }
+
 }

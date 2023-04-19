@@ -21,20 +21,20 @@ public class Relogio extends Observable implements Observer {
         @Override
         public void actionPerformed(ActionEvent event) {
             segundos--;
-            
+
             setChanged();
             notifyObservers();
-            
+
             if (getSegundos() <= 0) {
                 if (lado == Cores.BRANCO) {
                     partida.setEstado(EstadosPartida.BRANCAS_VENCERAM);
                 } else {
                     partida.setEstado(EstadosPartida.NEGRAS_VENCERAM);
                 }
-                
+
                 timer.stop();
             }
-            
+
         }
     };
 
@@ -45,7 +45,7 @@ public class Relogio extends Observable implements Observer {
         this.acrescimo = acrescimo;
 
         partida.addObserver(this);
-        
+
         this.timer = new Timer(1000, listener);
     }
 
@@ -65,7 +65,7 @@ public class Relogio extends Observable implements Observer {
     public void parar() {
         timer.stop();
     }
-    
+
     public int getSegundos() {
         return segundos;
     }
@@ -74,6 +74,4 @@ public class Relogio extends Observable implements Observer {
         return lado;
     }
 
-    
-    
 }

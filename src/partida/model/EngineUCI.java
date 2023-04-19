@@ -35,21 +35,20 @@ public class EngineUCI extends Thread {
 
             // writer.write("setoption name UCI_LimitStrength value true\n");
             // writer.write("setoption name UCI_Elo value 400\n");
-            
+
             writer.write("uci\n");
             writer.write("setoption name Skill Level value " + dificuldade + "\n");
-            
+
             writer.flush();
-            
+
             movimentos = new ArrayList();
         } catch (IOException ex) {
             ex.printStackTrace();
         }
     }
-    
+
     public void receberMovimento(String movimento) {
         try {
-
             if (movimento != null) {
                 movimentos.add(movimento);
 
@@ -62,7 +61,7 @@ public class EngineUCI extends Thread {
             } else {
                 writer.write("ucinewgame\n");
             }
-            
+
             writer.flush();
 
             new Thread() {
@@ -88,7 +87,6 @@ public class EngineUCI extends Thread {
 
     public String enviarMovimento() {
         try {
-
             String line, move = null;
             while ((line = reader.readLine()) != null) {
                 if (line.split(" ")[0].equals("bestmove")) {
