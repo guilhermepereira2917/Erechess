@@ -12,8 +12,6 @@ public class ThreadJogador extends Thread {
     ObjectInputStream entradaDeDados;
     ObjectOutputStream saidaDeDados;
 
-    
-
     public ThreadJogador(Socket jogador) {
         try {
             this.jogador = jogador;
@@ -37,7 +35,6 @@ public class ThreadJogador extends Thread {
 
     @Override
     public void run() {
-        
     }
 
     public Cores getCorDoLado() {

@@ -76,7 +76,7 @@ public class Controlador {
 
         adicionarListenerBotoes();
     }
-    
+
     private Casa primeiraCasaSelecionada, segundaCasaSelecionada, casaClicada;
 
     class MovimentoListener implements MouseMotionListener, MouseListener {
@@ -97,7 +97,6 @@ public class Controlador {
         }
 
         private boolean primeiroClique() {
-
             if (primeiraCasaSelecionada != null || !Movimento.validarPrimeiraSelecao(casaClicada)) {
                 return false;
             }
@@ -228,7 +227,6 @@ public class Controlador {
     }
 
     class NovaPartidaListener implements ActionListener {
-
         @Override
         public void actionPerformed(ActionEvent e) {
             if (framePartida.confirmarCriacaoNovaPartida()) {
@@ -238,7 +236,6 @@ public class Controlador {
     }
 
     class RetornarAoMenuPrincipalListener implements ActionListener {
-
         @Override
         public void actionPerformed(ActionEvent e) {
             if (framePartida.confirmarVoltarAoMenuPrincipal()) {

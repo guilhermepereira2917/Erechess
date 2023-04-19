@@ -15,7 +15,7 @@ import util.AuxiliarMovimentos;
 public class Casa extends Observable {
 
     private Coordenada coordenada;
-    private Cores cor = null; // 0 = branca; 1 = preta;
+    private Cores cor = null;
     private Peca peca;
 
     private Tabuleiro tabuleiro;
@@ -63,11 +63,13 @@ public class Casa extends Observable {
                 }
 
                 Casa casa = casas[novoY][novoX];
+
                 if (!casa.estaVazia()) {
                     Peca pecaEncontrada = casa.getPeca();
+
                     if (pecaEncontrada.getCor() != cor) {
-                        /* 
-                            Como o método movimentosPossiveis da classe Peca nao retorna 
+                        /*
+                            Como o método movimentosPossiveis da classe Peca nao retorna
                             casas com pecas sendo da mesma cor, este if foi necessário pois
                             dependendo de qual direcao se estiver checando, somente peças de
                             classes específicas seriam capazes de defender esta casa.
@@ -128,7 +130,6 @@ public class Casa extends Observable {
         }
 
         for (Coordenada direcao : direcoes) {
-
             int novoY = direcao.getY() + getCoordenada().getY();
             int novoX = direcao.getX() + getCoordenada().getX();
 
@@ -153,7 +154,6 @@ public class Casa extends Observable {
         direcoes.add(new Coordenada(0, -1));
 
         for (Coordenada direcao : direcoes) {
-
             int novoY = direcao.getY() + getCoordenada().getY();
             int novoX = direcao.getX() + getCoordenada().getX();
 

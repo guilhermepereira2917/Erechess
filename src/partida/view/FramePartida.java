@@ -22,10 +22,10 @@ public class FramePartida extends JFrame implements Observer {
 
     protected PanelRelogio relogioBrancas;
     protected PanelRelogio relogioNegras;
-    
+
     JPanel panelArrastavel;
     JLabel arrastavel = new JLabel();
-    
+
     public FramePartida(Partida partida) {
         initComponents();
         this.partida = partida;
@@ -101,7 +101,7 @@ public class FramePartida extends JFrame implements Observer {
     public void aviso(String mensagem) {
         JOptionPane.showMessageDialog(this, mensagem);
     }
-    
+
     public boolean confirmarCriacaoNovaPartida() {
         return JOptionPane.YES_OPTION == JOptionPane.showConfirmDialog(this, "Tem certeza que deseja criar uma nova partida?", "Nova partida", JOptionPane.YES_NO_OPTION);
     }
@@ -151,7 +151,7 @@ public class FramePartida extends JFrame implements Observer {
 
         arrastavel.setLocation(xTela, yTela);
     }
-    
+
     @SuppressWarnings("all")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -313,7 +313,6 @@ public class FramePartida extends JFrame implements Observer {
     }//GEN-LAST:event_checkBoxMostarHistoricoActionPerformed
 
     private void itemNovaPartidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemNovaPartidaActionPerformed
-        
     }//GEN-LAST:event_itemNovaPartidaActionPerformed
 
     public PanelTabuleiro getPanelTabuleiro() {
@@ -362,7 +361,6 @@ public class FramePartida extends JFrame implements Observer {
         }
     }
 
-   
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenuBar barraMenu;
     private javax.swing.JCheckBoxMenuItem checkBoxDestacarUltimoMovimento;

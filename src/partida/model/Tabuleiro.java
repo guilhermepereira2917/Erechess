@@ -133,7 +133,6 @@ public class Tabuleiro extends Observable {
     }
 
     public boolean realizarMovimento(Movimento movimento) {
-
         // O movimento nao foi encontrado
         if (movimento == null) {
             return false;
@@ -158,13 +157,11 @@ public class Tabuleiro extends Observable {
                 if (verificarXequeMate(partida.getTurno())) {
                     xequeMate();
                 }
-                
                 xeque = true;
             } else {
                 if (verificarEmpate(partida.getTurno())) {
                     empate();
                 }
-                
                 xeque = false;
             }
 

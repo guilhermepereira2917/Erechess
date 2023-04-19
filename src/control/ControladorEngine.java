@@ -67,9 +67,8 @@ public class ControladorEngine extends Controlador {
         framePartida.dispose();
         new ControladorEngine(configuracoes);
     }
-    
-    class MovimentoEngineListener extends MovimentoListener {
 
+    class MovimentoEngineListener extends MovimentoListener {
         @Override
         public void clique(Object source) {
             if (lado != tabuleiro.getTurno()) {
